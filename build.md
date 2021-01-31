@@ -54,9 +54,10 @@
 
 インストーラビルドの仕組みは [こちら](installer/readme.md) を参照
 
-- [Inno Setup](http://www.jrsoftware.org/isdl.php) の以下のいずれかのバージョンです。
-    - [innosetup-5.5.9-unicode.exe](http://files.jrsoftware.org/is/5/) (appveyor でのビルドではこちらが使われます。)
-    - [innosetup-5.6.1-unicode.exe](http://www.jrsoftware.org/isdl.php)
+- [Inno Setup](http://www.jrsoftware.org/isdl.php) の以下のいずれかのバージョンです。(`CI`は最新バージョンを使用しています)
+  - <del>Inno Setup 5</del>(互換性がありません)
+  - [innosetup-6.1.2.exe](https://files.jrsoftware.org/is/6/innosetup-6.1.2.exe)
+
 
 ### (オプション) ログの解析等に必要なもの
 
