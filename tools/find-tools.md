@@ -16,7 +16,7 @@
 | Git for Windows    | CMD_GIT      | Git\Cmd            | git.exe      |
 | 7-Zip              | CMD_7Z       | 7-Zip              | 7z           |
 | HTML Help Workshop | CMD_HHC      | HTML Help Workshop | hhc.exe      |
-| Inno Setup 5       | CMD_ISCC     | Inno Setup 5       | ISCC.exe     |
+| Inno Setup 6       | CMD_ISCC     | Inno Setup 6       | ISCC.exe     |
 | cppcheck           | CMD_CPPCHECK | cppcheck           | cppcheck.exe |
 | doxygen            | CMD_DOXYGEN  | doxygen\bin        | doxygen.exe  |
 | vswhere            | CMD_VSWHERE  | Microsoft Visual Studio\Installer | vswhere.exe  |
