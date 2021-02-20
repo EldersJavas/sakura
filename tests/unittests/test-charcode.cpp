@@ -181,12 +181,30 @@ TEST_F(CharWidthCache, FontNo)
 	EXPECT_EQ(WCODE::GetFontNo2(0xd83c, 0xdf38), 1);
 }
 
+TEST_F(CharWidthCache, GetCharWidthCache)
+{
+	SelectCharWidthCache(CWM_FONT_EDIT, CWM_CACHE_LOCAL);
+	CCharWidthCache& edit1 = GetCharWidthCache();
+	SelectCharWidthCache(CWM_FONT_MINIMAP, CWM_CACHE_LOCAL);
+	CCharWidthCache& minimap = GetCharWidthCache();
+
+	// 違うキャッシュ
+	EXPECT_NE(&edit1, &minimap);
+
+	SelectCharWidthCache(CWM_FONT_EDIT, CWM_CACHE_LOCAL);
+	CCharWidthCache& edit2 = GetCharWidthCache();
+
+	// 同じキャッシュ
+	EXPECT_EQ(&edit1, &edit2);
+}
+
 TEST(charcode, IS_KEYWORD_CHAR)
 {
-	for (wchar_t ch = 0; ch < _countof(gm_keyword_char); ++ch) {
+	for (wchar_t ch = 0; ch < gm_keyword_char.size(); ++ch) {
 		EXPECT_EQ(IS_KEYWORD_CHAR(ch),
 			gm_keyword_char[ch] == CK_CSYM || gm_keyword_char[ch] == CK_UDEF);
 	}
+	EXPECT_FALSE(IS_KEYWORD_CHAR(static_cast<wchar_t>(-1)));
 }
 
 // 以下、関数が判定している文字がすべてASCII範囲内であれば総当たりテストを実施する。

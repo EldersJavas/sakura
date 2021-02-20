@@ -257,6 +257,8 @@
     <ClInclude Include="..\sakura_core\apiwrap\CommonControl.h" />
     <ClInclude Include="..\sakura_core\apiwrap\StdApi.h" />
     <ClInclude Include="..\sakura_core\apiwrap\StdControl.h" />
+    <ClInclude Include="..\sakura_core\basis\TComImpl.hpp" />
+    <ClInclude Include="..\sakura_core\basis\CErrorInfo.h" />
     <ClInclude Include="..\sakura_core\basis\CLaxInteger.h" />
     <ClInclude Include="..\sakura_core\basis\CMyPoint.h" />
     <ClInclude Include="..\sakura_core\basis\CMyRect.h" />
@@ -526,6 +528,7 @@
     <ClInclude Include="..\sakura_core\util\tchar_convert.h" />
     <ClInclude Include="..\sakura_core\util\tchar_template.h" />
     <ClInclude Include="..\sakura_core\util\window.h" />
+    <ClInclude Include="..\sakura_core\util\zoom.h" />
     <ClInclude Include="..\sakura_core\version.h" />
     <ClInclude Include="..\sakura_core\view\CCaret.h" />
     <ClInclude Include="..\sakura_core\view\CEditView.h" />
@@ -607,6 +610,7 @@
   <ItemGroup>
     <ClCompile Include="..\sakura_core\apiwrap\StdApi.cpp" />
     <ClCompile Include="..\sakura_core\apiwrap\StdControl.cpp" />
+    <ClCompile Include="..\sakura_core\basis\CErrorInfo.cpp" />
     <ClCompile Include="..\sakura_core\basis\CLaxInteger.cpp" />
     <ClCompile Include="..\sakura_core\basis\CMyPoint.cpp" />
     <ClCompile Include="..\sakura_core\basis\CMyRect.cpp" />
@@ -919,6 +923,7 @@
     <ClCompile Include="..\sakura_core\util\tchar_convert.cpp" />
     <ClCompile Include="..\sakura_core\util\tchar_template.cpp" />
     <ClCompile Include="..\sakura_core\util\window.cpp" />
+    <ClCompile Include="..\sakura_core\util\zoom.cpp" />
     <ClCompile Include="..\sakura_core\view\CCaret.cpp" />
     <ClCompile Include="..\sakura_core\view\CEditView.cpp" />
     <ClCompile Include="..\sakura_core\view\CEditView_Cmdgrep.cpp" />

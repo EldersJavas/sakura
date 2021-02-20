@@ -22,20 +22,14 @@
 		3. This notice may not be removed or altered from any source
 		   distribution.
 */
-#pragma once
-
-#include <string_view>
+#include "StdAfx.h"
+#include <comdef.h>
+#include <OAIdl.h>
 
 /*!
- * テストコード専用wWinMain呼出のラッパー関数
- *
- * 単体テストから wWinMain を呼び出すためのラッパー関数です。
- *
- * wWinMain は呼出元のグローバル変数を汚してしまうため、
- * ASSERT_EXIT, ASSERT_DEATH などを使って別プロセスで実行するようにしてください。
- *
- * この関数をコントロールプロセスの起動に使用しないでください。
- * googletestでは、ASSERT_EXITで起動したプロセスの完全な終了を待機できないようです。
- * コントロールプロセスが終了する前に他のテストが実行されると期待した動作にならない場合があります。
+	MinGW向け_com_raise_error実装
  */
-int StartEditorProcessForTest(std::wstring_view commandLine);
+void _com_raise_error(HRESULT hr, IErrorInfo* pErrorInfo)
+{
+	throw _com_error(hr, pErrorInfo, true);
+}
